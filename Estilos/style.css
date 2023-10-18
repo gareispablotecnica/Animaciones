@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-color:#eaeaea ;
+}
+
+.Encabezado{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 7%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo{
+    font-size: 25px;
+    color:#222;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a{
+    font: 20px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+}
+
+.navbar a:hover{
+    color: #591124;
+}
+
+.navbar a.posicion{
+    color: #591124;
+}
+
+.inicio{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 7% 0;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido{
+    max-width: 650px;
+}
+
+.contenido h1{
+    font-size: 45px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: titulo 1s ease forwards;
+    animation-delay:1s;
+}
+
+.contenido h3{
+    font-size: 35px;
+    color: #591124;
+    opacity: 0;
+    animation: titulo 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.contenido p{
+    font: 15px;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: parrafo 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.boton{
+    display: inline-block;
+    padding: 10px 25px;
+    background: #591124;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: white;
+    font: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.8s;
+    text-decoration: none;
+    opacity: 0;
+    animation: boton 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
+.boton:hover{
+    background: transparent;
+    color: #222;
+    border: 1px solid #591124;
+}
+
+.imagen{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform: rotate(50deg);
+}
+
+.marco{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -8%;
+    background-color: #eaeaea;
+    border: 20px solid #591124;
+}
+
+.imagen .marco img{
+    position: absolute;
+    max-width: 600px;
+    top: -150px;
+    left: 5px;
+    transform: rotate(-40deg);
+    opacity: 0;
+        animation:tanjiro 1s ease forwards;
+        animation-delay: 1s;
+}
+
+img{
+    max-height: 620px;
+}
+
+
+@keyframes tanjiro{
+    0%{
+        transform: translate(450px, -450px) 
+        scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0, 0) 
+        scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+
+@keyframes titulo{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes parrafo{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes boton{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
